@@ -107,7 +107,7 @@ class CornSyurpRampingSim():
         lvl_low_lim_ix = 50
         lvl_high_lim_pu = 100
         lvl_low_lim_pu = 0
-        Kc, Ki, Kd = [1.0, 1.0, 0.0]
+        Kc, Ki, Kd = [2.0, 40.0, 0.0]
         self.pid.tunings = (Kc, Ki, Kd)
         self.pid.output_limits = (sp_low_lim, sp_high_lim)
 
@@ -126,7 +126,7 @@ class CornSyurpRampingSim():
         sp_low_lim = 225
         lvl_high_lim = 68   #Tunable
         lvl_low_lim = 40    #Tunable
-        Kc, Ki, Kd = [1.0, 1.0, 0.0]
+        Kc, Ki, Kd = [1.5, 26.0, 0.0]
         self.pid.tunings = (Kc, Ki, Kd)
         self.pid.output_limits = (sp_low_lim, sp_high_lim)
 
@@ -141,7 +141,7 @@ class CornSyurpRampingSim():
     def getpixflow(self, pixlvl):
         ratio_val = 5.5     #Tunable
         scaler = 50         #Tunable
-        Kc, Ki, Kd = [1.0, 1.0, 0.0]
+        Kc, Ki, Kd = [1.0, 15.0, 0.0]
         self.pid.tunings = (Kc, Ki, Kd)
 
         flowsp = (pixlvl)*ratio_val + scaler
@@ -158,7 +158,7 @@ class CornSyurpRampingSim():
         sp_low_lim = 290
         lvl_high_lim = 65   #Tunable
         lvl_low_lim = 30    #Tunable
-        Kc, Ki, Kd = [1.0, 1.0, 0.0]
+        Kc, Ki, Kd = [1.0, 10.0, 0.0]
         self.pid.tunings = (Kc, Ki, Kd)
 
         if auto:
